@@ -104,4 +104,17 @@ public class StartActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        if (mainLayout.getVisibility()==View.VISIBLE)
+        {
+            finish();
+        }
+        else
+        {
+            mainLayout.setVisibility(View.VISIBLE);
+            soloLevel.setVisibility(View.GONE);
+            multiplayerLevel.setVisibility(View.GONE);
+        }
+    }
 }
